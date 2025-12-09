@@ -1,16 +1,102 @@
-# React + Vite
+# 🎉 Convite — Plataforma de Convites Interativos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um projeto em React inspirado na experiência do Festalab: convite fixo à esquerda, conteúdo navegável à direita e seções que funcionam como páginas independentes. Inclui formulário de RSVP, navegação por ícones e área administrativa para edição do conteúdo.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## React Compiler
+- **React + Vite**
+- **TypeScript**
+- **Lucide-React** (ícones)
+- **CSS Modules / Styled Components**
+- **React Hooks**
+- **(Opcional)** Integração com **Electron** para versão desktop
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📂 Estrutura do Projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+/src
+/components
+InvitePage.jsx
+RSVPForm.jsx
+SidebarMenu.jsx
+/assets
+convite.jpeg
+/styles
+invite.css
+App.jsx
+main.jsx
+public/
+README.md
+
+
+---
+
+## ✨ Funcionalidades
+
+### 🖼️ Layout
+- Convite grande fixo à esquerda.
+- Lado direito com:
+  - Título do evento
+  - Data + botão “Adicionar ao calendário”
+  - Local do evento
+  - Botões de confirmação (RSVP)
+  - Conteúdo dividido em seções
+
+### 🔗 Navegação
+- Menu vertical de ícones que leva a:
+  - **Local**
+  - **Mensagem**
+  - **Recados**
+  - **Confirmação**
+- Cada seção se comporta como uma “nova página”.
+
+### 📨 RSVP
+- Modal para confirmação de presença.
+- Envio de resposta com validação.
+
+### 🔐 Área Administrativa (opcional)
+- Edita:
+  - Título
+  - Data
+  - Local
+  - Mensagens
+  - Configurações gerais
+
+---
+
+## ▶️ Como rodar o projeto
+
+### 1. Instale as dependências
+npm install
+
+### 2. Ambiente de desenvolvimento
+npm run dev
+
+### 3. Build de produção
+npm run build
+
+### 4. Pré-visualizar build
+npm run preview
+
+💡 Como funciona o InvitePage
+
+Organiza cada seção com useRef.
+
+Faz scroll automático até a seção desejada.
+
+Mantém estado da aba ativa (local, mensagem, recados, confirmação).
+
+Controla modal e dados do RSVP.
+
+📌 Roadmap
+
+ Versão mobile otimizada
+
+ Animações suaves entre seções
+
+ Integração com backend real para RSVP
+
+ Painel administrativo completo
